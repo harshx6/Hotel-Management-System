@@ -109,12 +109,6 @@ Password: admin123
 
 ---
 
-## 📷 Screenshots
-
-Find UI previews inside the [`Screenshots/`](./Screenshots/) folder.
-
----
-
 ## 👤 Author
 
 **Harsh Panchal**  
