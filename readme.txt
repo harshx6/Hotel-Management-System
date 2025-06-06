@@ -32,19 +32,22 @@ This system includes **five distinct user types**, each with its own permissions
 ```bash
 pip install Django==3.1.4
 pip install django-phonenumber-field[phonenumbers]
-2. Create User Groups and Admin Account
-Navigate to the project’s HMS directory and start the shell:
+```
 
-bash
-Copy
-Edit
+---
+
+### 2. Create User Groups and Admin Account
+
+Navigate to the project’s `HMS` directory and start the shell:
+
+```bash
 cd Django---Hotel-Management-System/HMS
 python3 manage.py shell
-Then run the following commands one by one in the Python shell:
+```
 
-python
-Copy
-Edit
+Then run the following commands **one by one** in the Python shell:
+
+```python
 from django.contrib.auth.models import Group, User
 from accounts.models import Employee
 
@@ -60,46 +63,61 @@ user.groups.add(group)
 
 admin = Employee(user=user, salary=0)
 admin.save()
-3. Migrate the Database & Run the Server
-bash
-Copy
-Edit
+```
+
+---
+
+### 3. Migrate the Database & Run the Server
+
+```bash
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
-Visit http://127.0.0.1:8000/ to access the application.
+```
 
-🔐 Login & Role Management
-By default, only Guest users can register.
+> Visit `http://127.0.0.1:8000/` to access the application.
 
-To add employees (Manager, Receptionist, Staff), log in as Admin:
+---
 
-text
-Copy
-Edit
-Username: admin
+## 🔐 Login & Role Management
+
+- By default, only **Guest** users can register.
+- To add employees (Manager, Receptionist, Staff), log in as Admin:
+
+```
+Username: admin  
 Password: admin123
-Go to the Employee page → Click "Add New Employee" → Fill the form.
+```
 
-💳 Payment Page Disclaimer
-The payment screen is non-functional — no real transactions are processed.
+- Go to the **Employee** page → Click **"Add New Employee"** → Fill the form.
 
-It's included to simulate a real booking flow.
+---
 
-A verification code is sent to the user's email after this step.
+## 💳 Payment Page Disclaimer
 
-📧 Email Configuration
-Open HMS/settings.py
+- The payment screen is **non-functional** — no real transactions are processed.
+- It's included to simulate a real booking flow.
+- A verification code is sent to the user's email after this step.
 
-Scroll to the email section and uncomment the settings
+---
 
-Update with your email credentials to enable email features (e.g., confirmation emails)
+## 📧 Email Configuration
 
-📷 Screenshots
-Find UI previews inside the Screenshots/ folder.
+- Open `HMS/settings.py`
+- Scroll to the email section and uncomment the settings
+- Update with your email credentials to enable email features (e.g., confirmation emails)
 
-👤 Author
-Harsh Panchal
-Bachelor of Computer Science, Carleton University
-LinkedIn
-GitHub
+---
+
+## 📷 Screenshots
+
+Find UI previews inside the [`Screenshots/`](./Screenshots/) folder.
+
+---
+
+## 👤 Author
+
+**Harsh Panchal**  
+Bachelor of Computer Science, Carleton University  
+[LinkedIn](https://www.linkedin.com/in/harsh-panchal-b2a25419b/)  
+
